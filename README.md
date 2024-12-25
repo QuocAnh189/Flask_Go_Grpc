@@ -1,10 +1,11 @@
-# EventHub
+# FLask_Go_Grpc
 
 ===========================================================
 
 # 1. How to run the app (Development Environment)
 
 Go (version 1.23.2) - Python (version 3.8.10)
+Require: Check `protoc --version` or install
 
 1. Clone the repo and cd into it
 2. Rename or copy `.env.example` file to `.env` (Get AccessKey at `https://api.countrylayer.com`)
