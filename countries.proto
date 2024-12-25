@@ -1,7 +1,7 @@
 syntax = "proto3";
 package countries;
 
-option go_package = "server/countries";
+option go_package = "golang/countries";
 
 message CountryRequest {
 	string name = 1;

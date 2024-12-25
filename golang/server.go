@@ -2,7 +2,7 @@ package main
 
 import (
 	"encoding/json"
-	"flask_go_grpc/server/countries"
+	"flask_go_grpc/golang/countries"
 	"io"
 	"log"
 	"net"
@@ -19,6 +19,8 @@ type Server struct {
     countries.UnimplementedCountryServer
 }
 
+
+//rename 'main' if you want to run this file
 func main() {
     grpcServer := grpc.NewServer()
     var server Server

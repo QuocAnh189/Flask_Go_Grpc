@@ -9,21 +9,32 @@ Require: Check `protoc --version` or install
 
 1. Clone the repo and cd into it
 2. Rename or copy `.env.example` file to `.env` (Get AccessKey at `https://api.countrylayer.com`)
-3. Download the necessary python libraries in the python/app.py directory
-4. Install gRPC packages for Python
-   `pip install grpcio grpcio-tools`
-5. Download the necessary go libraries in the server/main.go directory
-6. Install gRPC packages for Golang
-   `go get -u google.golang.org/grpc`
-   `golang.org/x/net/context`
+3. Download the necessary python libraries in the python directory
+4. Install gRPC packages for Python `pip install grpcio grpcio-tools`
+5. Download the necessary go libraries in the golang directory
+6. Install gRPC packages for Golang `go get -u google.golang.org/grpc`
 7. In your terminal run `python -m grpc_tools.protoc -I. --python_out=client --grpc_python_out=client countries proto`
 8. In your terminal run `protoc -I . --go_out=. --go-grpc_out=. countries.proto`
-9. In your terminal `cd server` at server folder , run `go run main.go` to start grpc server.
-10. In your terminal `cd client` at client folder , run `python app.py` to start client.
+
+## Client-Side(Golang) And Server-Side(Python)
+
+In your terminal `cd golang` at server folder , run `go run client.go` to start client.
+In your terminal `cd python` at client folder , run `python server.py` to start grpc server.
+
+## Client-Side(Python) And Server-Side(Golang)
+
+In your terminal `cd python` at client folder , run `python client.py` to start client.
+In your terminal `cd golang` at server folder , run `go run server.go` to start grpc server.
 
 ### POSTMAN DEMO :
 
-![imagedemo](https://res.cloudinary.com/dadvtny30/image/upload/v1735112521/portfolio/lvwvijnmrd1bdtbicbd8.png)
+# Client-Side(Golang) And Server-Side(Python)
+
+![imagedemo](https://res.cloudinary.com/dadvtny30/image/upload/v1735121556/portfolio/caogks9ulwrnjyrnjyom.png)
+
+# Client-Side(Python) And Server-Side(Golang)
+
+![imagedemo](https://res.cloudinary.com/dadvtny30/image/upload/v1735121542/portfolio/fclx9dppumnhlwf5sel8.png)
 
 ## Author Contact
 
