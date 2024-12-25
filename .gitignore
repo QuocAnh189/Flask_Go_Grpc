@@ -1,0 +1,11 @@
+debug
+vendor/*/
+.ssh
+debug
+vendor/*/
+.vscode
+*.pyc
+client/countries_pb2.py
+client/countries_pb2_grpc.py
+server/countries/countries.pb.go
+server/countries/countries_grpc.pb.go
