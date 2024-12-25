@@ -1,0 +1,20 @@
+syntax = "proto3";
+package countries;
+
+option go_package = "server/countries";
+
+message CountryRequest {
+	string name = 1;
+}
+
+message CountryResponse {
+    string name = 1;
+    string alpha2Code = 2;
+    string alpha3Code = 3;
+    string capital = 4;
+    string region = 5;
+}
+
+service Country {
+  rpc search (CountryRequest) returns (CountryResponse) {}
+}

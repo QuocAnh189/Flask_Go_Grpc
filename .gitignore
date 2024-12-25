@@ -7,5 +7,6 @@ vendor/*/
 *.pyc
 client/countries_pb2.py
 client/countries_pb2_grpc.py
+client/__pycache__
 server/countries/countries.pb.go
 server/countries/countries_grpc.pb.go
