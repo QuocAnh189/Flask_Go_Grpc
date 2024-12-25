@@ -16,12 +16,13 @@ Go (version 1.23.2) - Python (version 3.8.10)
    `go get -u google.golang.org/grpc`
    `golang.org/x/net/context`
 7. In your terminal run `python -m grpc_tools.protoc -I. --python_out=client --grpc_python_out=client countries proto`
-8. In your terminal `cd server` at server folder , run `go run main.go` to start grpc server.
-9. In your terminal `cd client` at client folder , run `python app.py` to start client.
+8. In your terminal run `protoc -I . --go_out=. --go-grpc_out=. countries.proto`
+9. In your terminal `cd server` at server folder , run `go run main.go` to start grpc server.
+10. In your terminal `cd client` at client folder , run `python app.py` to start client.
 
 ### POSTMAN DEMO :
 
-![imagedemo]("https://res.cloudinary.com/dadvtny30/image/upload/v1735112521/portfolio/lvwvijnmrd1bdtbicbd8.png")
+![imagedemo](https://res.cloudinary.com/dadvtny30/image/upload/v1735112521/portfolio/lvwvijnmrd1bdtbicbd8.png)
 
 ## Author Contact
 
