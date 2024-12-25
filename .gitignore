@@ -10,3 +10,4 @@ client/countries_pb2_grpc.py
 client/__pycache__
 server/countries/countries.pb.go
 server/countries/countries_grpc.pb.go
+.env

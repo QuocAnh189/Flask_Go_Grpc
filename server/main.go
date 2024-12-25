@@ -7,7 +7,9 @@ import (
 	"log"
 	"net"
 	"net/http"
+	"os"
 
+	"github.com/joho/godotenv"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 )
@@ -31,7 +33,13 @@ func main() {
 
 // Search function responsible for getting country information
 func (Server) Search(ctx context.Context, request *countries.CountryRequest) (*countries.CountryResponse, error) {
-	accessKey := "a13d491d5c4bbb857206a4849e20f4d9"
+    err := godotenv.Load("../.env")
+    if err != nil {
+        log.Fatal("Error loading .env file")
+    }
+
+    accessKey := os.Getenv("AccessKey")
+    
     resp, err := http.Get("https://api.countrylayer.com/v2/name/" + request.Name + "?access_key=" + accessKey)
 
     if err != nil {
